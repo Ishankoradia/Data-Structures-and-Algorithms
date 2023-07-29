@@ -16,6 +16,8 @@ assert que.queue[0] == 1
 que.put(4)
 assert que.queue[0] == 1
 
+print("size: ", que.qsize())
+
 que.put(5)
 assert que.queue[0] == 1
 
