@@ -1,4 +1,8 @@
 # using the in built list/array in python
+# you can also just use the following functions of the list inteasd of implementing the stack
+# list().append(x)
+# list().pop()
+# list()[-1]
 
 
 class Stack:
