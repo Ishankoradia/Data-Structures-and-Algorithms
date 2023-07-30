@@ -3,6 +3,7 @@ from implementation import BinaryNode
 # data | left subtree | right subtree
 
 
+############ recursive ############
 def preorder_recursive(root: BinaryNode, ans=[]):
     if root is None:
         return
@@ -32,3 +33,42 @@ root.left.right.right = BinaryNode(15)
 root.right.right.left.left = BinaryNode(19)
 
 assert [5, 12, 9, 4, 15, 6, -1, 10, 9, 19] == preorder_recursive(root, [])
+
+
+############ iterative ############
+# states
+# 1) data
+# 2) call left child
+# 3) call right child
+class Pair:
+    def __init__(self, node: BinaryNode, state: int) -> None:
+        self.node = node
+        self.state = state
+
+
+def preorder_iterative(root: BinaryNode):
+    ans = []
+    # initialize a stack
+    st = list()
+    p = Pair(root, 1)
+    st.append(p)
+    while len(st) > 0:
+        top: Pair = st[-1]
+        if top.state == 1:
+            ans.append(top.node.val)
+            top.state += 1
+            if top.node.left is not None:
+                st.append(Pair(top.node.left, 1))
+
+        elif top.state == 2:
+            top.state += 1
+            if top.node.right is not None:
+                st.append(Pair(top.node.right, 1))
+
+        elif top.state == 3:
+            st.pop()
+
+    return ans
+
+
+assert preorder_iterative(root) == [5, 12, 9, 4, 15, 6, -1, 10, 9, 19]
