@@ -33,4 +33,4 @@ root.left.right = BinaryNode(3)
 root.left.left.left = BinaryNode(6)
 
 assert height(root)[0] == 3
-assert height(root)[1] == False
+assert height(root)[1] is False
