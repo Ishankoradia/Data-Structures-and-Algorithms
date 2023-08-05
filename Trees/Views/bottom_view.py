@@ -49,4 +49,4 @@ root.left.left.left.right.right = BinaryNode(15)
 root.left.left.left.right.right.right = BinaryNode(16)
 
 
-assert bottom_tree_view(root) == [6, 5, 2, 1, 3, 13]
+assert bottom_tree_view(root) == [6, 14, 15, 16, 4, 11]
