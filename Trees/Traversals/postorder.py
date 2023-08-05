@@ -1,4 +1,4 @@
-from implementation import BinaryNode
+from implementation import BinaryNode, Pair
 
 # left subtree | right subtree | data
 
@@ -40,10 +40,6 @@ assert [4, 15, 9, 12, -1, 19, 9, 10, 6, 5] == postorder_recursive(root)
 # 1) call left child
 # 2) call right child
 # 3) print/append data
-class Pair:
-    def __init__(self, node: BinaryNode, state: int) -> None:
-        self.node = node
-        self.state = state
 
 
 def postorder_iterative(root: BinaryNode):

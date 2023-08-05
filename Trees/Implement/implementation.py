@@ -9,3 +9,9 @@ class GenericNode:
     def __init__(self, x) -> None:
         self.val = x
         self.children = list()
+
+
+class Pair:
+    def __init__(self, node: BinaryNode, state: int) -> None:
+        self.node = node
+        self.state = state
