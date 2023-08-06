@@ -46,7 +46,6 @@ root.left.right.right = BinaryNode(15)
 # level 4
 root.right.right.left.left = BinaryNode(19)
 
-ans = []
 assert node_to_root_path(root, 15) == [15, 9, 12, 5]
 assert node_to_root_path(root, -1) == [-1, 6, 5]
 assert node_to_root_path(root, 19) == [19, 9, 10, 6, 5]
