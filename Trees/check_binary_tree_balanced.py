@@ -7,14 +7,24 @@ A balanced binary tree is defined as
 from Trees.Implement.implementation import BinaryNode
 
 
-def height(root: BinaryNode, is_balanced: bool = True):
-    if root is None:
-        return [-1, True]
+def is_balanced_tree(root: BinaryNode):
+    hm = {"ans": True}
 
-    height_lst = height(root.left, is_balanced)[0]
-    height_rst = height(root.right, is_balanced)[0]
+    def height(root: BinaryNode, hm: dict):
+        if root is None:
+            return -1
 
-    return [max(height_rst, height_lst) + 1, abs(height_lst - height_rst) <= 1]
+        height_lst = height(root.left, hm)
+        height_rst = height(root.right, hm)
+
+        if abs(height_lst - height_rst) > 1:
+            hm["ans"] = False
+
+        return max(height_rst, height_lst) + 1
+
+    height(root, hm)
+
+    return hm["ans"]
 
 
 # test cases
@@ -32,5 +42,4 @@ root.left.right = BinaryNode(3)
 # level 3
 root.left.left.left = BinaryNode(6)
 
-assert height(root)[0] == 3
-assert height(root)[1] is False
+assert is_balanced_tree(root) is False
