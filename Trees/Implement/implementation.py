@@ -15,3 +15,10 @@ class Pair:
     def __init__(self, node: BinaryNode, state: int) -> None:
         self.node = node
         self.state = state
+
+
+class TrieNode:
+    def __init__(self, val: str):
+        self.val = val
+        self.children = [None] * 26
+        self.eow = False  # end of word to mark words in the Trie
