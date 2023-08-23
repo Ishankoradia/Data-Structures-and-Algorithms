@@ -22,3 +22,12 @@ class TrieNode:
         self.val = val
         self.children = [None] * 26
         self.eow = False  # end of word to mark words in the Trie
+
+
+class TrieBitNode:
+    def __init__(self, val: int):
+        if val not in [0, 1]:
+            raise ValueError("Node values must be binary either 0 or 1")
+
+        self.val = val
+        self.children = [None] * 2
