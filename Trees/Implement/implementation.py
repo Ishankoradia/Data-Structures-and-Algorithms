@@ -30,4 +30,4 @@ class TrieBitNode:
             raise ValueError("Node values must be binary either 0 or 1")
 
         self.val = val
-        self.children = [None] * 2
+        self.children: list[TrieBitNode | None] = [None] * 2

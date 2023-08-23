@@ -1,7 +1,7 @@
 from Trees.Implement.implementation import TrieBitNode
 
 
-def build_bit_trie(arr) -> TrieBitNode:
+def build_bit_trie(arr) -> tuple:
     """input is array of number"""
 
     # max element
@@ -27,12 +27,12 @@ def build_bit_trie(arr) -> TrieBitNode:
 
             curr = curr.children[idx]
 
-    return root
+    return (root, max_bit_cnt)
 
 
 nums = [3, 6, 12, 14]
 
-root = build_bit_trie(nums)
+root, max_bit_cnt = build_bit_trie(nums)
 
 # test cases
 
