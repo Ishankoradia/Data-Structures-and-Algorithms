@@ -54,12 +54,13 @@ def subsets(arr):
         else:
             return 1
 
-    final.sort(key=functools.cmp_to_key(compare))
+    # final.sort(key=functools.cmp_to_key(compare))
 
-    return final
+    return sorted(final)
 
 
 ans = subsets([3, 1, 2])
+print(ans)
 
 assert ans[0] == []
 assert ans[1] == [1]
