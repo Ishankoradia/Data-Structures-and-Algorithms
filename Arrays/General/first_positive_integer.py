@@ -5,7 +5,7 @@ You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary s
 """
 
 
-def firstMissingPositive(self, nums) -> int:
+def firstMissingPositive(nums) -> int:
     N = len(nums)
     for i in range(N):
         j = i
