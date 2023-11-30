@@ -65,6 +65,7 @@ def heap_solve(A):
 
     heapq.heappush(end_times, A[0][1])
 
+    # idea is to check if some room is occupied or not ; if not assign the same room to a meeting
     for i in range(1, N):
         if end_times[0] <= A[i][0]:
             heapq.heappop(end_times)
