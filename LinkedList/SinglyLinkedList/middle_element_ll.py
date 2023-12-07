@@ -5,7 +5,7 @@ NOTE: If there are N nodes in the linked list and N is even then return the (N/2
 """
 
 
-def solve(A):
+def middle_ele_ll(A):
     fast = A
     slow = A
 

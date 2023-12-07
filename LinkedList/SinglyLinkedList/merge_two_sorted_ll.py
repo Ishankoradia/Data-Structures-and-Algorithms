@@ -6,7 +6,7 @@ The new list should be made by splicing together the nodes of the first two list
 from LinkedList.SinglyLinkedList.implement import ListNode
 
 
-def merge(A: ListNode, B: ListNode):
+def merge_ll(A: ListNode, B: ListNode):
     if A == None:
         return B
 
