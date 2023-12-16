@@ -45,3 +45,6 @@ def largest_rectangle_hist(A):
         max_area = max(area, max_area)
 
     return max_area
+
+
+assert largest_rectangle_hist([0, 2, 1]) == 2
