@@ -1,4 +1,4 @@
-from implementation import BinaryNode, Pair
+from Trees.Implement.implementation import BinaryNode, Pair
 
 # left subtree | right subtree | data
 
