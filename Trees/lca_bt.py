@@ -27,7 +27,7 @@ def lca_bt(root: BinaryNode, k1: int, k2: int):
 
 
 def lca_bt_v1(root: BinaryNode, k1: int, k2: int):
-    """TC: O(n) but SC: O(1)"""
+    """TC: O(n) but SC: O(H)"""
 
     def find(root, x):
         if root is None:
